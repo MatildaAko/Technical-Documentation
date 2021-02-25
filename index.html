@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Newsreader:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Documentation</title>
+</head>
+
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>HTML Documentation
+            </header>
+            <div class="nav-wrapper">
+                <a href="#Introduction" class="nav-link">Introduction</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Anatomy_of_an_HTML_element" class="nav-link">Anatomy of an HTML element</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Anatomy_of_an_HTML_document" class="nav-link">Anatomy of an HTML document</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Headings_and_Paragraphs" class="nav-link">Headings and Paragraphs</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Implementing_structural_hierarchy">- Implementing structural hierarchy</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Hyperlinks" class="nav-link">Hyperlinks</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Lists" class="nav-link">Lists</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Unordered">- Unordered</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Ordered">- Ordered</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Nesting_lists">- Nesting lists</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Multimedia" class="nav-link">Multimedia</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Images">- Images</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Video">- Video</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Audio">- Audio</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#Next_Steps" class="nav-link">Next Steps</a>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#References" class="nav-link">References</a>
+            </div>
+        </nav>
+        <div id="main-text">
+            <section class="main-section" id="Introduction">
+                <header>
+                    <h1>Introduction</h1>
+                </header>
+                <p>
+                    To build websites, you should know about HTML - the fundamental technology used to define the structure of a webpage. HTML is used to specify whether your web content should be recognized as a paragraph, list, heading, link, image, multimedia player,
+                    form, or one of many other available elements or even a new element that you define.
+                </p>
+                <p>
+                    HTML (Hypertext Markup Language) is not a programming language. It is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series
+                    of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so
+                    on. For example, consider the following line of text:
+                </p>
+                <pre><code>My cat is very grumpy</code></pre>
+                <p>
+                    If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph (<code>&lt;p&gt;</code>) element:
+                </p>
+                <pre><code>&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code></pre>
+
+                <p>HTML markup includes special "elements" such as <code>&lt;head&gt;</code>
+                    <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>,
+                    <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>,
+                    <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>,
+                    <code>&lt;img&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;audio&gt;</code>,
+                    <code>&lt;canvas&gt;</code>, <code>&lt;datalist&gt;</code>, <code>&lt;details&gt;</code>,
+                    <code>&lt;embed&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;output&gt;</code>,
+                    <code>&lt;progress&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;ul&gt;</code>,
+                    <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> and many others.
+                </p>
+                <br>
+                <p>
+                    An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "<code>&lt;</code>" and "<code>&gt;</code>". The name of an element inside a tag is case insensitive. That is, it can
+                    be written in uppercase, lowercase, or a mixture. For example, the <code>&lt;title&gt;</code> tag can be written as <code>&lt;Title&gt;</code>,
+                    <code>&lt;TITLE&gt;</code>, or in any other way.
+                </p>
+            </section>
+            <section class="main-section" id="Anatomy_of_an_HTML_element">
+                <header>
+                    <h1>Anatomy of an HTML element</h1>
+                </header>
+                <p>
+                    Let's further explore our paragraph element from the previous section:
+                </p>
+                <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png" alt="HTML Anatomy">
+                <p>The anatomy of our element is:</p>
+                <div class="list-wrapper">
+                    <ul>
+                        <li>
+                            <b>The opening tag:</b> This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In
+                            this example, it precedes the start of the paragraph text.
+                        </li>
+                        <li>
+                            <b>The content:</b> This is the content of the element. In this example, it is the paragraph text.
+                        </li>
+                        <li>
+                            <b>The closing tag:</b> This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that
+                            can produce peculiar results.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="main-section" id="Anatomy_of_an_HTML_document">
+                <header>
+                    <h1>Anatomy of an HTML document</h1>
+                </header>
+                <p>
+                    Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:
+                </p>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;My test page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;This is my test page&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <p>Here we have:</p>
+                <div class="list-wrapper">
+                    <ol>
+                        <li>
+                            <code>&lt;!DOCTYPE html&gt;</code>: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something
+                            like this:
+                            <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code></pre> More recently, the doctype is a historical artifact that needs to be included for everything else to work right. <code>&lt;!DOCTYPE
+                                    html&gt;</code> is the shortest string of characters that counts as a valid doctype. That is all you need to know!
+                        </li>
+                        <li>
+                            <code>&lt;html&gt;&lt;/html&gt;</code>: The <code>&lt;html&gt;</code> element. This element wraps all the content on the page. It is sometimes known as the root element.
+                        </li>
+                        <li>
+                            <code>&lt;head&gt;&lt;/head&gt;</code>: The
+                            <code>&lt;head&gt;</code> element. This element acts as a container for everything you want to include on the HTML page,
+                            <b>that isn't the content</b> the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You'll learn more about
+                            this in the next article of the series.
+                        </li>
+                        <li>
+                            <code>&lt;meta charset="utf-8"&gt;</code>: This element specifies the character set for your document to UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can
+                            now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.
+                        </li>
+                        <li>
+                            <code>&lt;title&gt;&lt;/title&gt;</code>: The <code>&lt;title&gt;</code> element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe
+                            the page when it is bookmarked.
+                        </li>
+                        <li>
+                            <code>&lt;body&gt;&lt;/body&gt;</code>: The
+                            <code>&lt;body&gt;</code> element. This contains all the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section class="main-section" id="Headings_and_Paragraphs">
+                <header>
+                    <h1>Headings and Paragraphs</h1>
+                </header>
+                <p>Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.</p>
+                <p>Structured content makes the reading experience easier and more enjoyable.</p>
+                <p>In HTML, each paragraph has to be wrapped in a <code>&lt;p&gt;</code> element, like so:
+                </p>
+                <pre><code>&lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</code></pre>
+                <p>Each heading has to be wrapped in a heading element:
+                </p>
+                <pre><code>&lt;h1&gt;I am the title of the story.&lt;/h1&gt;</code></pre>
+                <p>There are six heading elements:
+                    <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>,
+                    <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code> and
+                    <code>&lt;h6&gt;</code>. Each element represents a different level of content in the document;
+                    <code>&lt;h1&gt;</code> represents the main heading,
+                    <code>&lt;h2&gt;</code> represents subheadings,
+                    <code>&lt;h3&gt;</code> represents sub-subheadings, and so on.</p>
+                <div class="nav-item-wrapper">
+                    <h2 id="Implementing_structural_hierarchy">Implementing structural hierarchy</h2>
+                </div>
+                <p>For example, in this story, the <code>&lt;h1&gt;</code> element represents the title of the story, the <code>&lt;h2&gt;</code> elements represent the title of each chapter, and the
+                    <code>&lt;h3&gt;</code> elements represent sub-sections of each chapter:</p>
+                <pre><code>&lt;h1&gt;The Crushing Bore&lt;/h1&gt;
+&lt;p&gt;By Chris Mills&lt;/p&gt;
+&lt;h2&gt;Chapter 1: The dark night&lt;/h2&gt;
+&lt;p&gt;It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...&lt;/p&gt;
+&lt;h2&gt;Chapter 2: The eternal silence&lt;h2&gt;
+&lt;p&gt;Our protagonist could not so much as a whisper out of the shadowy figure ...&lt;/p&gt;
+&lt;h3&gt;The specter speaks&lt;/h3&gt;
+&lt;p&gt;Several more hours had passed, when all of a sudden the specter sat bolt upright and exclaimed, "Please have mercy on my soul!"&lt;/p&gt;</code></pre>
+                <p>It's really up to you what the elements involved represent, as long as the hierarchy makes sense. You just need to bear in mind a few best practices as you create such structures:</p>
+                <div class="list-wrapper">
+                    <ul>
+                        <li>Preferably, you should use a single <code>&lt;h1&gt;</code> per page — this is the top level heading, and all others sit below this in the hierarchy.</li>
+                        <li>Make sure you use the headings in the correct order in the hierarchy. Don't use
+                            <code>&lt;h3&gt;</code> elements to represent subheadings, followed by
+                            <code>&lt;h2&gt;</code> elements to represent sub-subheadings—that doesn't make sense and will lead to weird results.
+                        </li>
+                        <li>Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary. Documents with many levels (i.e., a deep heading hierarchy) become unwieldy and difficult to navigate. On
+                            such occasions, it is advisable to spread the content over multiple pages if possible.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="main-section" id="Hyperlinks">
+                <header>
+                    <h1>Hyperlinks</h1>
+                </header>
+                <p>Hyperlinks are one of the most exciting innovations the Web has to offer. They've been a feature of the Web since the beginning, and are what makes the Web a web. Hyperlinks allow us to link documents to other documents or resources, link
+                    to specific parts of documents, or make apps available at a web address. Almost any web content can be converted to a link so that when clicked or otherwise activated the web browser goes to another web address (URL).</p>
+                <p>A basic link is created by wrapping the text or other content, see Block level links, inside an
+                    <code>&lt;a&gt;</code> element and using the <code>href</code> attribute, also known as a Hypertext Reference, or target, that contains the web address.</p>
+                <pre><code>&lt;p&gt;I'm creating a link to\
+&lt;a href="https://www.mozilla.org/en-US/"&gt;the Mozilla homepage&lt;/a&gt;.
+&lt;/p&gt;</code></pre>
+                <p>This gives us the following result:</p>
+                <p>I'm creating a link to <a href="https://www.mozilla.org/en-US/">the Mozilla homepage.</a></p>
+            </section>
+            <section class="main-section" id="Lists">
+                <header>
+                    <h1>Lists</h1>
+                </header>
+                <p>Now let's turn our attention to lists. Lists are everywhere in life—from your shopping list to the list of directions you subconsciously follow to get to your house every day, to the lists of instructions you are following in these tutorials!
+                    Lists are everywhere on the web, too, and we've got three different types to worry about.</p>
+                <div class="nav-item-wrapper" id="Unordered">
+                    <h2>Unordered</h2>
+                </div>
+                <p>Unordered lists are used to mark up lists of items for which the order of the items doesn't matter. Let's take a shopping list as an example:</p>
+                <pre><code>milk
+eggs
+bread 
+hummus</code></pre>
+                <p>Every unordered list starts off with a &lt;ul&gt;element—this wraps around all the list items:
+                </p>
+                <pre><code>&lt;ul&gt;
+    milk
+    eggs
+    bread
+    hummus
+&lt;/ul&gt;</code></pre>
+                <p>The last step is to wrap each list item in a &lt;li&gt; (list item) element:</p>
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;milk&lt;/li&gt;
+    &lt;li&gt;eggs&lt;/li&gt;
+    &lt;li&gt;bread&lt;/li&gt;
+    &lt;li&gt;hummus&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <div class="nav-item-wrapper" id="Ordered">
+                    <h2>Ordered</h2>
+                </div>
+                <p>Ordered lists are lists in which the order of the items does matter. Let's take a set of directions as an example:</p>
+                <pre><code>Drive to the end of the road
+Turn right
+Go straight across the first two roundabouts
+Turn left at the third roundabout
+The school is on your right, 300 meters up the road</code></pre>
+                <p>The markup structure is the same as for unordered lists, except that you have to wrap the list items in an <code>&lt;ul&gt;</code> element, rather than <code>&lt;ul&gt;</code>:</p>
+                <pre><code>&lt;ol&gt;
+    &lt;li&gt;Drive to the end of the road&lt;/li&gt;
+    &lt;li&gt;Turn right&lt;/li&gt;
+    &lt;li&gt;Go straight across the first two roundabouts&lt;/li&gt;
+    &lt;li&gt;Turn left at the third roundabout&lt;/li&gt;
+    &lt;li&gt;The school is on your right, 300 meters up the road&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                <div class="nav-item-wrapper" id="Nesting_lists">
+                    <h2>Nesting lists</h2>
+                </div>
+                <p>It is perfectly ok to nest one list inside another one. You might want to have some sub-bullets sitting below a top-level bullet. Let's take a recipe example:</p>
+                <pre><code>&lt;ol&gt;
+    &lt;li&gt;Remove the skin from the garlic, and chop coarsely.&lt;/li&gt;
+    &lt;li&gt;Remove all the seeds and stalk from the pepper, and chop coarsely.&lt;/li&gt;
+    &lt;li&gt;Add all the ingredients into a food processor.&lt;/li&gt;
+    &lt;li&gt;Process all the ingredients into a paste.&lt;/li&gt;
+    &lt;li&gt;If you want a coarse "chunky" hummus, process it for a short time.&lt;/li&gt;
+    &lt;li&gt;If you want a smooth hummus, process it for a longer time.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                <p>Since the last two bullets are very closely related to the one before them (they read like sub-instructions or choices that fit below that bullet), it might make sense to nest them inside their own unordered list and put that list inside
+                    the current fourth bullet. This would look like so:
+                </p>
+                <pre><code>&lt;ol&gt;
+    &lt;li&gt;Remove the skin from the garlic, and chop coarsely.&lt;/li&gt;
+    &lt;li&gt;Remove all the seeds and stalk from the pepper, and chop coarsely.&lt;/li&gt;
+    &lt;li&gt;Add all the ingredients into a food processor.&lt;/li&gt;
+    &lt;li&gt;Process all the ingredients into a paste.&lt;/li&gt;
+        &lt;ul&gt;
+            &lt;li&gt;If you want a coarse "chunky" hummus, process it for a short time.&lt;/li&gt;
+            &lt;li&gt;If you want a smooth hummus, process it for a longer time.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </section>
+            <section class="main-section" id="Multimedia">
+                <header>
+                    <h1>Multimedia</h1>
+                </header>
+                <div class="nav-item-wrapper" id="Images">
+                    <h2>
+                        Images
+                    </h2>
+                </div>
+                <p>In order to put a simple image on a webpage, we use the <code>&lt;img&gt;</code> element. This is an empty element (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — src (sometimes
+                    spoken as its full title, source). The src attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as href attribute values in
+                    <code>&lt;a&gt;</code> elements.</p>
+                <p>So for example, if your image is called <code>dinosaur.jpg</code>, and it sits in the same directory as your HTML page, you could embed the image like so:</p>
+                <pre><code>&lt;img src="dinosaur.jpg"&gt;</code></pre>
+                <p>If the image was in an images subdirectory, which was inside the same directory as the HTML page (which Google recommends for SEO/indexing purposes), then you'd embed it like this:</p>
+                <pre><code>&lt;img src="images/dinosaur.jpg"&gt;</code></pre>
+                <p>And so on.</p>
+                <p>You could embed the image using its absolute URL, for example:</p>
+                <pre><code>&lt;https://www.example.com/images/dinosaur.jpg"&gt;</code></pre>
+                <p>But this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You'll almost always keep the images for your website on the same server as your HTML.
+                </p>
+                <div class="warning">
+                    <p><b>Warning:</b> Most images are copyrighted. Do <b>not</b> display an image on your webpage unless:
+                        <div class="list-wrapper">
+                            <ul>
+                                <li>You own the image.</li>
+                                <li>You have received explicit, written permission from the image owner.</li>
+                                <li>You have ample proof that the image is, in fact, in the public domain.</li>
+                            </ul>
+                        </div>
+                    </p>
+                    <p>Copyright violations are illegal and unethical. In addition,
+                        <b>never</b> point your <code>src</code> attribute at an image hosted on someone else's website that you don't have permission to link to. This is called "hotlinking". Again, stealing someone's bandwidth is illegal. It also slows
+                        down your page, leaving you with no control over whether the image is removed or replaced with something embarrassing.
+                    </p>
+                </div>
+                <div class="nav-item-wrapper" id="Video">
+                    <h2>
+                        Video
+                    </h2>
+                    <p>
+                        The <code>&lt;video&gt;&lt;/video&gt;</code> element allows you to embed a video very easily. A really simple example looks like this:</p>
+
+                    <pre><code>&lt;video src="rabbit320.webm" controls&gt;
+    &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="rabbit320.webm"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
+&lt;/video&gt;</code></pre>
+                    <p>The features of note are:</p><br>
+                    <dl>
+                        <dt><code>src</code></dt>
+                        <dd>In the same way as for the <code>&lt;img&gt;</code> element, the <code>src</code> (source) attribute contains a path to the video you want to embed. It works in exactly the same way.</dd>
+                        <dt><code>controls</code></dt>
+                        <dd>Users must be able to control video and audio playback (it's especially critical for people who have epilepsy.) You must either use the <code>controls</code> attribute to include the browser's own control interface, or build your
+                            interface using the appropriate JavaScript API. At a minimum, the interface must include a way to start and stop the media, and to adjust the volume.</dd>
+                        <dt><b>The paragraph inside the <code>&lt;video&gt;</code> tags</b></dt>
+                        <dd>This is called <b>fallback content</b> — this will be displayed if the browser accessing the page doesn't support the <code>&lt;video&gt;</code> element, allowing us to provide a fallback for older browsers. This can be anything
+                            you like; in this case, we've provided a direct link to the video file, so the user can at least access it some way regardless of what browser they are using.
+                        </dd>
+                    </dl>
+                </div>
+                <div class="nav-item-wrapper" id="Audio">
+                    <h2>
+                        Audio
+                    </h2>
+                    <p>The <code>&lt;audio&gt;</code> element works just like the <code>&lt;video&gt;</code> element, with a few small differences as outlined below. A typical example might look like so:
+                    </p>
+                    <pre><code>&lt;audio controls&gt;
+    &lt;source src="viper.mp3" type="audio/mp3"&gt;
+    &lt;source src="viper.ogg" type="audio/ogg"&gt;
+    &lt;p&gt;Your browser doesn't support HTML5 audio. Here is a &lt;a href="viper.mp3"&gt;link to the audio&lt;/a&gt; instead.&lt;/p&gt;
+&lt;/audio&gt;</code></pre>
+                    <p>This takes up less space than a video player, as there is no visual component — you just need to display controls to play the audio. Other differences from HTML video are as follows:</p>
+                    <div class="list-wrapper">
+                        <ul>
+                            <li>The <code>&lt;audio&gt;</code> element doesn't support the width/height attributes — again, there is no visual component, so there is nothing to assign a width or height to.
+                            </li>
+                            <li>It also doesn't support the <code>poster</code> attribute — again, no visual component.
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Other than this, <code>&lt;audio&gt;</code> supports all the same features as
+                        <code>&lt;video&gt;</code></p>
+                </div>
+            </section>
+            <section class="main-section" id="Next_Steps">
+                <header>
+                    <h1>Next Steps</h1>
+                </header>
+                <p>The information in this documentation just scratches the surface of what you are able to do with HTML, for example, you are able to create <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms">forms</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables">tables</a>,
+                    you can also <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">embed
+                            videos</a> from other websites. There are many <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML elements</a> that you will use for various web development projects as well as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">attributes</a>                    which add additional value that configure the elements or change the behaviour in various ways. When you have comfortably learnt <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML#guides">HTML</a>, you
+                    can continue to learn
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps">CSS</a> to add styles to the website and <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript</a> to add scripting, together
+                    these three come together to build a basic and beautiful website. </p>
+            </section>
+            <section class="main-section" id="References">
+                <header>
+                    <h1>References</h1>
+                </header>
+                <p>All of the information in this documentation was taken from the HTML section from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="
+                _blank">Mozilla Developer Network Web Docs</a>. Please visit to learn more HTML as well as other technologies required for development.
+                </p>
+                <br>
+            </section>
+        </div>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
